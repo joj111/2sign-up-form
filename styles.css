@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Shadows+Into+Light&display=swap');
+
 body {
     display: flex;
     flex-direction: row;
@@ -16,14 +18,17 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 2vw;
     position: absolute;
-    background-color: grey;
-    opacity: 90%;
+    background-color: rgb(48, 48, 48);
+    opacity: 80%;
     top: 20%;
-    right: 5px;
+    right: 0%;
+    left: 0%;
 }
 
 .logo-img {
+    padding: 2%;
     width: 20%;
     height: 20%;
 }
@@ -33,5 +38,58 @@ body {
     display: flex;
     align-items: center;
     font-size: 3rem;
-    font-family: 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    padding: 5%;
+    padding-right: 10%;
+}
+
+.top, p, form {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.p-mid {
+    text-align: start;
+    font-weight: 600;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    gap: 20%;
+}
+
+.fill {
+    flex: 1 0 21%;
+    margin: 2%;
+    height: 5%;
+    width: 250px;
+}
+
+.mid {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: rgb(60, 150, 60);
+    background-color: rgb(60, 150, 60);
+    color: white;
+    font-weight: 700;
 }
