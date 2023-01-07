@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="left">
-        <img class="main-img" src="/images/teemu-paananen-OOE4xAnBhKo-unsplash.jpg" alt="background image">
+        <img class="main-img" src="/images/halie-west-25xggax4bSA-unsplash.jpg" alt="background image">
         <div class="logo">
             <img class="logo-img" src="/images/odin-lined.png" alt="Odin Logo">
             <p class="logo-text">ODIN</p>
@@ -53,22 +53,40 @@
                         <div>
                             <label for="password">Password</label>
                         </div>
-                    <input type="password" name="password" id="password">
+                    <input type="password" name="password" id="password" onkeyup="check()">
                     </div>
 
                     <div class="fill">
                         <div>
                             <label for="confirm_password">Confirm Password</label>
                         </div>
-                    <input type="password" name="confirm_password" id="confirm_password">
+                    <input type="password" name="confirm_password" id="confirm_password" onkeyup="check()">
                     </div>
                 </div>
             </form>
         </div>
         <div class="bot">
-            <button class="create">Create Account</button>
+            <button class="create" id="create" >Create Account</button>
             <p>Already have an account? <a href="">Sign In</a></p>
+            <p id="status"></p>
         </div>
     </div>
+
+    <script>
+        let check = function() {
+            const sumbit = document.getElementById(create);
+
+            if (document.getElementById("password").value == document.getElementById("confirm_password").value) {
+                document.getElementById("status").innerHTML = "passwords match";
+                create.style.backgroundColor = "rgb(60, 150, 60)"
+                create.style.borderColor = "rgb(60, 150, 60)";
+
+            } else {
+                document.getElementById("status").innerHTML = "passwords don't match";
+                create.style.backgroundColor = "red";
+                create.style.borderColor = "red";
+            }
+        }
+    </script>
 </body>
 </html>
